@@ -11,7 +11,8 @@ class ProductContainer extends Component {
     };
 
     // Fetches posts for a specific city
-    fetchProducts = () => {
+    // fetchProducts = () => {
+    componentDidMount = () => {
         ProductModel.getProducts()
             .then(response => {
                 this.setState({ productList: response.data });
@@ -21,10 +22,15 @@ class ProductContainer extends Component {
             });
     };
 
+    // componentDidMount = () => {
+    //     this.fetchPosts();
+    // };
+
     render() {
         console.log("product list:", this.state.productList);
 
         return <div className="product-container">
+            <h1>Product Container</h1>
             <section className="product-list-header">
             </section>
             <Products
