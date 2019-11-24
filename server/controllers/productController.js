@@ -1,6 +1,6 @@
 let db = require("../models");
 
-// GET api/posts
+// GET api/products
 const getAllProducts = (req, res) => {
     db.Product.find({}, (err, products) => {
         if (err) {

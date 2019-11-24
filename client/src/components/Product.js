@@ -4,7 +4,7 @@ class Product extends Component {
 
     render() {
 
-        return <div></div>
+        return <div><h1>{this.props.product.title}</h1></div>
     }
 }
 
